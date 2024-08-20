@@ -1,5 +1,5 @@
-#ifndef CONTAINERS_SRC_ARRAY_H_
-#define CONTAINERS_SRC_ARRAY_H_
+#ifndef CONTAINERS_SRC_PS_ARRAY_H_
+#define CONTAINERS_SRC_PS_ARRAY_H_
 
 #include <iostream>
 
@@ -296,4 +296,4 @@ void ps::array<T, N>::fill(const T &value) {
   }
 }
 
-#endif  // CONTAINERS_SRC_ARRAY_H_
+#endif  // CONTAINERS_SRC_PS_ARRAY_H_
