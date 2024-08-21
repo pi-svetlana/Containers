@@ -10,6 +10,6 @@ set(CMAKE_BUILD_TYPE Debug)
 
 
 add_subdirectory(src)
-# add_subdirectory(tests)
+add_subdirectory(tests)
 
 enable_testing()
