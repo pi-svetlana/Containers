@@ -14,7 +14,7 @@ enable_testing()
 add_executable(
         containers_test
         array_tests.cc
-        # vector_tests.cc
+        vector_tests.cc
         deque_tests.cc
         queue_tests.cc
         stack_tests.cc
