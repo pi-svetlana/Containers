@@ -1,4 +1,4 @@
-all: ps_containers.a test
+all: build test
 
 build:
 	mkdir build

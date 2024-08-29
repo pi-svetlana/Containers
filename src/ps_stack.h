@@ -76,8 +76,8 @@ typename ps::stack<T, Container>::reference ps::stack<T, Container>::top() {
 }
 
 template <class T, class Container>
-typename ps::stack<T, Container>::const_reference
-ps::stack<T, Container>::top() const {
+typename ps::stack<T, Container>::const_reference ps::stack<T, Container>::top()
+    const {
   return deque_.back();
 }
 

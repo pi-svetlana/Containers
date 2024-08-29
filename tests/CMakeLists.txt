@@ -18,11 +18,11 @@ add_executable(
         deque_tests.cc
         queue_tests.cc
         stack_tests.cc
-        # list_tests.cc
-        # rb_tree_tests.cc
-        # map_tests.cc
-        # set_tests.cc
-        # multiset_tests.cc
+        list_tests.cc
+        rb_tree_tests.cc
+        map_tests.cc
+        set_tests.cc
+        multiset_tests.cc
 )
 target_link_libraries(
         containers_test

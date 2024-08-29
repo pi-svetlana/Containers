@@ -148,8 +148,7 @@ typename ps::vector<T>::reference ps::vector<T>::at(size_type pos) {
 }
 
 template <class T>
-typename ps::vector<T>::const_reference ps::vector<T>::at(
-    size_type pos) const {
+typename ps::vector<T>::const_reference ps::vector<T>::at(size_type pos) const {
   if (pos >= size_) {
     throw std::out_of_range("Out of range");
   }
@@ -197,8 +196,7 @@ typename ps::vector<T>::const_iterator ps::vector<T>::begin() const noexcept {
 }
 
 template <class T>
-typename ps::vector<T>::const_iterator ps::vector<T>::cbegin()
-    const noexcept {
+typename ps::vector<T>::const_iterator ps::vector<T>::cbegin() const noexcept {
   return data_;
 }
 
@@ -269,7 +267,7 @@ void ps::vector<T>::clear() noexcept {
 
 template <class T>
 typename ps::vector<T>::iterator ps::vector<T>::insert(const_iterator pos,
-                                                         const T& value) {
+                                                       const T& value) {
   size_type index = size_type(pos - begin());
   if (index > size_) {
     throw std::out_of_range("Out of range");
@@ -323,8 +321,8 @@ void ps::vector<T>::swap(vector& other) noexcept {
 
 template <class T>
 template <class... Args>
-typename ps::vector<T>::iterator ps::vector<T>::insert_many(
-    const_iterator pos, Args&&... args) {
+typename ps::vector<T>::iterator ps::vector<T>::insert_many(const_iterator pos,
+                                                            Args&&... args) {
   size_type index = size_type(pos - begin());
   for (const auto& arg : {args...}) {
     insert(begin() + index, arg);

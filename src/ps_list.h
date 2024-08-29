@@ -1,7 +1,6 @@
 #ifndef CONTAINERS_SRC_PS_LIST_H_
 #define CONTAINERS_SRC_PS_LIST_H_
 
-
 #include <iostream>
 
 namespace ps {
@@ -235,8 +234,7 @@ ps::list<T, Allocator>::Node::~Node() {
 }
 
 template <class T, class Allocator>
-typename ps::list<T, Allocator>::Node*
-ps::list<T, Allocator>::allocate_node() {
+typename ps::list<T, Allocator>::Node* ps::list<T, Allocator>::allocate_node() {
   Node* node = nullptr;
   node = node_allocator::allocate(allocator_, 1);
   node_allocator::construct(allocator_, node);
@@ -330,8 +328,8 @@ typename ps::list<T, Allocator>::reference ps::list<T, Allocator>::front() {
 }
 
 template <class T, class Allocator>
-typename ps::list<T, Allocator>::const_reference
-ps::list<T, Allocator>::front() const {
+typename ps::list<T, Allocator>::const_reference ps::list<T, Allocator>::front()
+    const {
   return head_->value_;
 }
 
@@ -341,8 +339,8 @@ typename ps::list<T, Allocator>::reference ps::list<T, Allocator>::back() {
 }
 
 template <class T, class Allocator>
-typename ps::list<T, Allocator>::const_reference
-ps::list<T, Allocator>::back() const {
+typename ps::list<T, Allocator>::const_reference ps::list<T, Allocator>::back()
+    const {
   return tail_->value_;
 }
 
@@ -353,14 +351,14 @@ ps::list<T, Allocator>::begin() noexcept {
 }
 
 template <class T, class Allocator>
-typename ps::list<T, Allocator>::const_iterator
-ps::list<T, Allocator>::begin() const noexcept {
+typename ps::list<T, Allocator>::const_iterator ps::list<T, Allocator>::begin()
+    const noexcept {
   return ListConstIterator(head_);
 }
 
 template <class T, class Allocator>
-typename ps::list<T, Allocator>::const_iterator
-ps::list<T, Allocator>::cbegin() const noexcept {
+typename ps::list<T, Allocator>::const_iterator ps::list<T, Allocator>::cbegin()
+    const noexcept {
   return ListConstIterator(head_);
 }
 
@@ -607,7 +605,7 @@ void ps::list<T, Allocator>::sort() {
 
 template <class T, class Allocator>
 void ps::list<T, Allocator>::quick_sort(ListIterator first, ListIterator last,
-                                         size_type size) {
+                                        size_type size) {
   if (first != last && size > 1) {
     ListIterator pivot_it = first;
     ListIterator lhs = first;

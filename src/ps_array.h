@@ -174,8 +174,8 @@ constexpr typename ps::array<T, N>::reference ps::array<T, N>::operator[](
 }
 
 template <class T, size_t N>
-constexpr typename ps::array<T, N>::const_reference
-ps::array<T, N>::operator[](size_type pos) const {
+constexpr typename ps::array<T, N>::const_reference ps::array<T, N>::operator[](
+    size_type pos) const {
   return data_[pos];
 }
 
@@ -216,8 +216,7 @@ constexpr typename ps::array<T, N>::const_reference ps::array<T, N>::back()
 }
 
 template <class T, size_t N>
-constexpr typename ps::array<T, N>::iterator
-ps::array<T, N>::data() noexcept {
+constexpr typename ps::array<T, N>::iterator ps::array<T, N>::data() noexcept {
   return data_;
 }
 
@@ -229,8 +228,7 @@ constexpr typename ps::array<T, N>::const_iterator ps::array<T, N>::data()
 }
 
 template <class T, size_t N>
-constexpr typename ps::array<T, N>::iterator
-ps::array<T, N>::begin() noexcept {
+constexpr typename ps::array<T, N>::iterator ps::array<T, N>::begin() noexcept {
   return &data_[0];
 }
 
